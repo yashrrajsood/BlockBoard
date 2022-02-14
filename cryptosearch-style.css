@@ -1,0 +1,13 @@
+body {
+    background-color: #008CFF;
+    overflow: hidden;
+}
+
+#main-logo {
+    display: block;
+    width: 340px;
+    height:110px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
