@@ -12,11 +12,16 @@
   <meta property="og:description" content="A interactive dashboard where all your crypto investments can be viewed.">
   <link rel="icon" href="/Images/Logo/blockboard-favicon.png">
   <link rel="stylesheet" href="cryptosearch-style.css">
-  <script type="text/javascript" src="/js/Dashboard.js"></script>
 </head>
 
 <body>
     <img id="main-logo" src="Images/Logo/blockboard-logo-white-text.png">
+    <div class="wrap">
+        <form action="cryptoview.html" method="GET" class="search">
+            <input type="text" name="code" class="searchTerm" placeholder="Enter a currency code (e.g. BTC or ETH)" required>
+            <input type="submit" value="Go" class="searchButton">
+        </form>
+     </div>
 </body>
 
 </html>

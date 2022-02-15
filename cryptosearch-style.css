@@ -6,8 +6,53 @@ body {
 #main-logo {
     display: block;
     width: 340px;
-    height:110px;
+    height:100px;
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid white;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #008CFF;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid white;
+  background: #008CFF;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  margin-top: 30px;
+  width: 30%;
+  position: relative;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
