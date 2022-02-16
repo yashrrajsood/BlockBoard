@@ -1,5 +1,5 @@
 body {
-    background-color: #008CFF;
+    background-color: #262C72;
     overflow: hidden;
 }
 
@@ -28,18 +28,18 @@ body {
   height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9DBFAF;
+  color: #B9BDE0;
 }
 
 .searchTerm:focus{
-  color: #008CFF;
+  color: #262C72;
 }
 
 .searchButton {
   width: 40px;
   height: 36px;
   border: 1px solid white;
-  background: #008CFF;
+  background: #262C72;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -49,10 +49,29 @@ body {
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  margin-top: 30px;
+  margin-top: 42px;
   width: 30%;
   position: relative;
   top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+
+#signatureTag {
+  color: white;
+  font-family: 'Shippori Antique', sans-serif;
+  position: relative;
+  top: 50%;
+  left: 40%;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+a {
+  color: white;
+  text-decoration: none; /* no underline */
 }
