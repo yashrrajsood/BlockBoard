@@ -1,38 +1,357 @@
-#square_bottom_of_page{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,700;1,800&display=swap');
+
+#square_bottom_of_page {
     width: 100%;
-    height:70px;
+    height: 70px;
     margin-left: -10px;
     position: absolute;
-    bottom:0%;
-    background-color: #262C72;
-    border: 2px solid #262C72;
+    bottom: 0%;
+    background-color: #262c72;
+    border: 2px solid #262c72;
 }
 
-#logo_bottom_of_page{
+#logo_bottom_of_page {
     width: 115px;
     height: 33px;
-    position:absolute;
-    bottom: 25%;
-    right:47%;
-    user-select: none;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-body{
+body {
     overflow: hidden;
     background-color: #293081;
 }
 
+#crypto_logo{
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-top: -50px;
+
+}
+
 #titlePage {
     color: white;
-    font-family: 'Helvetica Neue', Condensed Bold;
-    font-size: 124px;
-    margin-top: -10px;
-    margin-left: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-left: 67px;
+    margin-bottom: 10px;
 }
 
 #priceTag {
     color: white;
-    font-family: 'Helvetica Neue', Condensed Bold;
-    font-size: 34px;
-    margin-top: -100px;
-    margin-left: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 55px;
+    margin-top: -10px;
+    margin-left: 24px;
+}
+
+#rankTag {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    float: right;
+    position: relative;
+    margin-top: -36px;
+    margin-right: 18px;
+}
+
+#rankTitle {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: -60px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+h1 {
+    font-size: 20vw;
+}
+
+.linear-wipe {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 6rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 5s infinite linear;
+}
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+#hideAll {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #262c72;
+    z-index: 99; /* Higher than anything else in the document */
+}
+
+#loading_gif {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#priceDivider {
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 350px;
+    height: 165px;
+    
+}
+
+#priceDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#priceDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+#oneHourChangeDivider {
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 12px;
+    margin-left: 24px;
+    width: 220px;
+    height: 165px;
+    
+}
+
+#oneHourChangeDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#oneHourChangeDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+#twentyFourHourChangeDivider {
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 12px;
+    margin-left: 24px;
+    width: 220px;
+    height: 165px;
+    
+}
+
+#twentyFourHourChangeDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#twentyFourHourChangeDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+#sevenDayChangeDivider {
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 12px;
+    margin-left: 24px;
+    width: 220px;
+    height: 165px;
+    
+}
+
+#sevenDayChangeDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#sevenDayChangeDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+
+#circulatingSupplyDivider {
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 12px;
+    margin-left: 24px;
+    width: 280px;
+    height: 165px;
+    
+}
+
+#circulatingSupplyDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#circulatingSupplyDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+#marketCapDivider{
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 12px;
+    margin-left: 24px;
+    width: 280px;
+    height: 165px;
+    
+}
+
+#marketCapDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#marketCapDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+#totalSupplyDivider {
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 280px;
+    height: 165px;
+    
+}
+
+#totalSupplyDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#totalSupplyDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+#descriptionDivider {
+    background-color: #303784;
+    border: 2px solid #303784;
+    display: inline-table;
+    position:relative;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 794px;
+    height: 165px;
+    /* height: 300px; */
+    
+}
+
+#descriptionDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: white;
+}
+
+#descriptionDividerTag{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 24px;
+}
+
+#descriptionDividerTagSubDivider{
+    margin-top: -15px;
+    margin-left: 24px;
+    height: 80px;
+    overflow: auto;
 }

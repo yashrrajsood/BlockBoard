@@ -17,8 +17,49 @@
 </head>
 
 <body>
-  <h1 id="titlePage"></h1>
-  <p id="priceTag">$3,320.38</p>
+  <div style="display: none" id="hideAll"><img id="loading_gif" src="Images/loading_icon.gif"></div>
+  <script type="text/javascript">
+    document.getElementById("loading_gif").style.visibility = (true ? 'visible' : 'hidden');
+    document.getElementById("hideAll").style.display = "block"; 
+  </script> 
+  <h1 id="titlePage"></h1><img id="crypto_logo" src="programming.gif" alt="crypto_logo" style="width:34px;height:34px;">
+  <!-- <p id="priceTag"></p> -->
+  <h1 id="rankTitle" class="linear-wipe">Rank</h1>
+  <p id="rankTag"></p>
+  <div id="priceDivider">
+    <h2 id="priceDividerTitle">Price 💵</h2>
+    <p id="priceDividerTag"></p>
+  </div>
+  <div id="oneHourChangeDivider">
+    <h2 id="oneHourChangeDividerTitle">1H % 📈📉</h2>
+    <p id="oneHourChangeDividerTag"></p>
+  </div>
+  <div id="twentyFourHourChangeDivider">
+    <h2 id="twentyFourHourChangeDividerTitle">24H % 📈📉</h2>
+    <p id="twentyFourHourChangeDividerTag"></p>
+  </div>
+  <div id="sevenDayChangeDivider">
+    <h2 id="sevenDayChangeDividerTitle">7D % 📈📉</h2>
+    <p id="sevenDayChangeDividerTag"></p>
+  </div>
+  <div id="marketCapDivider">
+    <h2 id="marketCapDividerTitle">Market Capacity 🏦</h2>
+    <p id="marketCapDividerTag"></p>
+  </div>
+  <div id="circulatingSupplyDivider">
+    <h2 id="circulatingSupplyDividerTitle">Circulating Supply 🌀</h2>
+    <p id="circulatingSupplyDividerTag"></p>
+  </div>
+  <div id="totalSupplyDivider">
+    <h2 id="totalSupplyDividerTitle">Total Supply ⚪️</h2>
+    <p id="totalSupplyDividerTag"></p>
+  </div>
+  <div id="descriptionDivider">
+    <h2 id="descriptionDividerTitle">Description 📘</h2>
+    <div id ="descriptionDividerTagSubDivider">&nbsp;
+      <p id="descriptionDividerTag"></p>
+    </div>
+  </div>
   <div id="square_bottom_of_page">
     <a href="cryptosearch.html">
       <img id="logo_bottom_of_page" src="Images/Logo/blockboard-logo-white-text.png">
