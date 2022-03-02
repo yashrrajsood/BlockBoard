@@ -1,8 +1,35 @@
+var colorTheme = "dark"
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
 let TICKER_CODE = params.code;
+
 window.onload = function what() {
+    refreshAllData();
+};
+
+function darkModeToggleButton(){
+    let root = document.documentElement;
+    if(colorTheme == "dark"){
+        root.style.setProperty('--tintBackGroundColor', "#EFFFFD");
+        root.style.setProperty('--tintBackGroundColorFooter', "#85F4FF");
+        root.style.setProperty('--dividerColor', "#B8FFF9");
+        root.style.setProperty('--fontColorsInter', "#333333")
+        document.getElementById("darkModeToggleButton").src = "Images/setTo_Dark.png"
+        colorTheme = "light";
+        console.log("color theme set to light");
+    }else if (colorTheme == "light"){
+        root.style.setProperty('--tintBackGroundColor', "#041C32");
+        root.style.setProperty('--tintBackGroundColorFooter', "#064663");
+        root.style.setProperty('--dividerColor', "#04293A");
+        root.style.setProperty('--fontColorsInter', "white")
+        document.getElementById("darkModeToggleButton").src = "Images/setTo_Light.png"
+        colorTheme = "dark";
+        console.log("color theme set to dark");
+    }
+}
+
+function refreshAllData(){
     fetch("http://localhost:3000/coinTEST/" + String(TICKER_CODE))
         .then((res) => {
             res.json().then(function (data) {
@@ -45,17 +72,17 @@ window.onload = function what() {
                 document.getElementById("rankTag").innerHTML = "#" + data["cmc_rank"];
                 document.getElementById("descriptionDividerTag").innerHTML = data["description"];
                 document.getElementById("hideAll").style.display = "none";
+
+                dragula([document.querySelector('#mainMegaDivider')]);
             });
         })
         .catch((err) => {
             /* handle errors */
             console.log("ERROR on fetch request", err);
             document.getElementById("hideAll").style.display = "none";
-            document.getElementById("titlePage").innerHTML = "☹️";
-            document.getElementById("priceTag").innerHTML = "Aw man, an error popped up - \n" + " " + err;
-            
-        });
-};
+            document.getElementById("titlePage").innerHTML = "☹️";   
+        })
+}
 
 function CurrencyFormatted(amount) {
     if (amount > 99999.99999){
@@ -102,3 +129,6 @@ function abbreviateNumber(value) {
 function buyOrSellIndicator(){
     return "Buy";
 }
+
+
+
