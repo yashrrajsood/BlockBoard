@@ -71,7 +71,7 @@ app.get('/coin/:coinID', (req, response) => {
                     
                     //console.log(data_to_save)
                 }
-                console.log("Data sent for " + values[0]["name"] + " sent!")
+                console.log("Data for " + values[0]["name"] + " sent!")
                 //console.log(values);
                 response.send(data_to_save)
                 //response.send("Ok soldier")
@@ -79,7 +79,7 @@ app.get('/coin/:coinID', (req, response) => {
                 console.log(reason);
             });
         } else {
-            console.log("Ticker does not exist");
+            console.log("Error: Unable to retrieve Data");
         }
         
     });

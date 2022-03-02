@@ -3,7 +3,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 let TICKER_CODE = params.code;
 window.onload = function what() {
-    fetch("http://localhost:3000/coin/" + String(TICKER_CODE))
+    fetch("http://localhost:3000/coinTEST/" + String(TICKER_CODE))
         .then((res) => {
             res.json().then(function (data) {
                 console.log(data);
@@ -57,7 +57,6 @@ window.onload = function what() {
         });
 };
 
-
 function CurrencyFormatted(amount) {
     if (amount > 99999.99999){
         amount = String(amount.toFixed(2));
@@ -98,4 +97,8 @@ function abbreviateNumber(value) {
     //     shortValue = shortValue.toFixed(1);
     // }
     // return shortValue+suffixes[suffixNum];
+}
+
+function buyOrSellIndicator(){
+    return "Buy";
 }
