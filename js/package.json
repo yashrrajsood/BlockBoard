@@ -3,6 +3,7 @@
     "axios": "^0.26.0",
     "cors": "^2.8.5",
     "dragula": "^3.7.3",
+    "echarts": "^5.3.0",
     "express": "^4.17.2",
     "requirejs": "^2.3.6"
   }

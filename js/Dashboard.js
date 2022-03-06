@@ -73,7 +73,9 @@ function refreshAllData(){
                 document.getElementById("descriptionDividerTag").innerHTML = data["description"];
                 document.getElementById("hideAll").style.display = "none";
 
+
                 dragula([document.querySelector('#mainMegaDivider')]);
+                
             });
         })
         .catch((err) => {
@@ -126,8 +128,33 @@ function abbreviateNumber(value) {
     // return shortValue+suffixes[suffixNum];
 }
 
-function buyOrSellIndicator(){
-    return "Buy";
+function buyOrSellIndicator(oneHour, twentyFourHour, sevenDay){
+    var buyChance = 0;
+    var sellChance = 0;
+    
+    if (oneHour > 0){
+        buyChance += 0.5;
+    }else{
+        sellChance += 0.5;
+    }
+    if (twentyFourHour > 0){
+        buyChance += 0.5;
+    }else{
+        sellChance += 0.5;
+    }
+    if (sevenDay > 0){
+        buyChance += 1;
+    }else{
+        sellChance += 1;
+    }
+
+    if (buyChance > sellChance){
+        return "buy";
+    }else if(buyChance < sellChance){
+        return "sell";
+    }else{
+        return "neutral";
+    }
 }
 
 
