@@ -425,6 +425,58 @@ h1 {
     overflow: auto;
 }
 
+#buySellGaugeDivider{
+    background-color: var(--dividerColor);;
+    border: 2px solid var(--dividerColor);;
+    display: inline-table;
+    position:relative;
+    -webkit-box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 12px -6px rgba(0, 0, 0, 0.7);
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 1418px;
+    height: 350px;
+    /* height: 300px; */
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+#buySellGaugeDividerTitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 24px;
+    color: var(--fontColorsInter);
+}
+
+#buySellGauge{
+    margin-bottom: -100px;
+    margin-left: 50px;
+}
+
+#buySellGauge2{
+    margin-top: -380px;
+    margin-left: 600px;
+}
+
+#buySellGuage2Title{
+    margin-top: -920px;
+    margin-left: -290px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: var(--fontColorsInter);
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+}
+
 #darkModeToggleButton{
     height: 50px;
     width: 50px;
@@ -440,6 +492,15 @@ h1 {
     float: right;
     margin-right: 10px;
     margin-top: 10px;
+    cursor: pointer;
+}
+
+#accessWalletButton{
+    height: 53px;
+    width: 53px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
     cursor: pointer;
 }
 

@@ -18,11 +18,11 @@
         />
         <link rel="icon" href="/Images/Logo/blockboard-favicon.png" />
         <link rel="stylesheet" href="cryptoview-style.css" />
+        <link rel="stylesheet" href="/js/node_modules/dragula/dist/dragula.css" />
         <script type="text/javascript" src="/js/Dashboard.js"></script>
         <script type="text/javascript" src="/js/dataRetriever.js"></script>
         <script type="text/javascript" src="/js/node_modules/dragula/dist/dragula.js"></script>
-
-        <link rel="stylesheet" href="/js/node_modules/dragula/dist/dragula.css" />
+        <script src="js/node_modules/echarts/dist/echarts.js"></script>
     </head>
 
     <body>
@@ -82,11 +82,13 @@
                     <p id="descriptionDividerTag"></p>
                 </div>
             </div>
-            <div>
-              <div id="indicatorChart"></div>
+            <div id="buySellGaugeDivider">
+              <h2 id="buySellGaugeDividerTitle">Technicals ⚙️</h2>
+              <div id="buySellGauge" style="width: 400px;height:400px;"></div>
+              <div id="buySellGauge2" style="width: 600px;height:200px;"></div>
+              <h3 id="buySellGuage2Title">Yearly Returns</p>
             </div>
         </div>
-
         <div id="square_bottom_of_page">
           <a href="cryptosearch.html">
               <img
@@ -96,6 +98,7 @@
           </a>
           <img id="darkModeToggleButton" src="Images/setTo_Light.png" onclick="darkModeToggleButton()">
           <img id="refreshDataButton" src="Images/refresh_button.png" onclick="refreshAllData()">
+          <img id="accessWalletButton" src="Images/walletIcon.png" onclick="accessWallet()">
       </div>
     </body>
 </html>

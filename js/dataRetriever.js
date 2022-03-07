@@ -28,7 +28,7 @@ var sample_data = {
     ,max_supply: 21000000
     ,name: "Bitcoin"
     ,percent_change_1h: -0.14056561
-    ,percent_change_7d: 4.57531657
+    ,percent_change_7d: -4.57531657
     ,percent_change_24h: -1.11798969
     ,percent_change_30d: -4.07603769
     ,price: 40295.732762907595
