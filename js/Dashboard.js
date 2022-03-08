@@ -57,7 +57,6 @@ function refreshAllData(){
 
                 var myChart = echarts.init(document.getElementById('buySellGauge'));
                 var chartValue = buyOrSellIndicator(data["percent_change_1h"], data["percent_change_24h"], data["percent_change_7d"]);
-                // Specify the configuration items and data for the chart
                 option = {
                     series: [
                     {
@@ -130,13 +129,11 @@ function refreshAllData(){
                     }
                     ]
                 };
-                // Display the chart using the configuration items and data just specified.
                 myChart.setOption(option);
 
                 var myChart2 = echarts.init(document.getElementById('buySellGauge2'));
-
-                const spirit = 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'
-                var maxData = 2000;
+                const spirit = 'Images/blockchainIcon.png'
+                var maxData = 1000;
                 option2 = {
                 tooltip: {},
                 xAxis: {
@@ -179,7 +176,7 @@ function refreshAllData(){
                     symbolClip: true,
                     symbolSize: 30,
                     symbolBoundingData: maxData,
-                    data: [891, 1220, 660, 1670],
+                    data: [getRandomInt(0, 1), getRandomInt(0, 1000), getRandomInt(0, 1000), getRandomInt(0, 1000)],
                     markLine: {
                         symbol: 'none',
                         label: {
@@ -222,7 +219,7 @@ function refreshAllData(){
                     symbol: spirit,
                     symbolSize: 30,
                     symbolBoundingData: maxData,
-                    data: [891, 1220, 660, 1670],
+                    data: [getRandomInt(0, 1), getRandomInt(0, 1000), getRandomInt(0, 1000), getRandomInt(0, 1000)],
                     z: 5
                     }
                 ]
