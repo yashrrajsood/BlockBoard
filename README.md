@@ -3,4 +3,4 @@
 A simple website that displays a selected Cryptocurrencies data in a beautiful manner
 
 
-This project is licensed by Copyright by Yash Sood (2022)
+This project is under Copyright by Yash Sood (2022)
